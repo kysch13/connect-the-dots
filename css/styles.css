@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+#main {
+    display: grid;
+    grid-template: 100% / 1fr 3fr;
+}
+
+#menu {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: #333333;
+}
+
+#main > div:last-of-type {
+    background-image: url('https://mario.nintendo.com/static/a5f7fe49f4862aa68eaba347ee05c336/02be2/mario.png');
+    background-color: #eaeaea;
+    background-blend-mode:overlay;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+#canvas {
+    height: 100%;
+    width: 100%;
+    background-size: 20px 20px;
+    background-image: linear-gradient(to right, #cdcdcd 1px, #ffffff00 1px), linear-gradient(to bottom, #cdcdcd 1px, #ffffff00 1px);
+}
+
+#ctd {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    cursor: crosshair;
+}
+
+@media print {
+    #menu {display: none;}
+    #ctd {width: 100vw; height: 100vh;}
+}
